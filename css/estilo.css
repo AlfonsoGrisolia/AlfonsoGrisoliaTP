@@ -1,0 +1,215 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {background-color: rgb(37, 31, 12);}
+a {text-decoration: none; color: black;}
+ul {display: flex; justify-content: space-evenly;}
+li {list-style-type: none;}
+li :hover {
+  background-color: rgba(238, 231, 231, 0.76);
+  border-bottom: solid 2px ;
+  
+}
+
+h1 { color: goldenrod; font-family: 'Kanit', sans-serif;}
+#contactoParrafo {color: goldenrod; font-family: 'Kanit', sans-serif;}
+p {color: aliceblue; margin-left: 12px;}
+.rrss {display: flex; justify-content: space-evenly;}
+.linea {
+  border-top: 1px solid goldenrod;
+  height: 2px;
+  padding: 0;
+  margin: 20px auto 0 auto;
+}
+.formContacto {
+  color: goldenrod;
+  text-align: center;
+}
+
+
+
+header {
+  display: grid;
+  grid-template-areas: 
+  "headerBaner headerBaner headerBaner"
+  "headerNav headerNav headerNav "
+  "logoUno logoUno logoUno"
+  "abajoDelLogo abajoDelLogo abajoDelLogo";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  
+}
+
+.headerBaner{grid-area: headerBaner; display: flex; background-color: rgb(165, 165, 165); justify-content: center; font-size: 15px; font-family: 'Kanit', sans-serif;}
+.headerNav{grid-area: headerNav;  background-color: rgb(255, 255, 255); font-family: 'Kanit', sans-serif; font-size: 18px; font-weight: bold;} 
+.logoUno{grid-area: logoUno; display: flex; justify-content: center;}
+#abajoDelLogo{grid-area: abajoDelLogo; display: flex; justify-content: center; color: goldenrod; font-family: 'Lobster Two', cursive;}
+
+/* Agregado al headerBaner */
+.headerBanerTel {
+  display: flex;
+  margin-left: 600px;
+  font-size: 15px;
+  font-family: 'Kanit', sans-serif;
+
+}
+
+main {
+  display: grid;
+  grid-template-areas: 
+  "banerPrincipal";
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+}
+.banerPrincipal {grid-area: banerPrincipal; width: 100%; display: flex; margin-top: 5px;} 
+
+.gridsMain{
+  display: grid;
+  grid-template-areas: 
+  "indexParrafo fony ";
+  grid-template-columns: 35% 65%;
+  grid-template-rows: auto;
+}
+
+.indexParrafo {grid-area: indexParrafo; color:aliceblue; font-family: 'Kanit', sans-serif; margin-left: 25px;}
+.fony {grid-area: fony; display: flex; flex-direction: column; padding-left: 200px;}
+
+
+
+
+.gridMejoramosMain {
+  display: grid;
+  grid-template-areas: 
+  "tituloYParrafo "
+  
+  
+  ;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: auto auto auto;
+}
+.tituloYParrafo {grid-area: tituloYParrafo; display: flex; flex-direction: column; margin-left: 40px; font-family: 'Kanit', sans-serif; }
+
+/* footer style */
+
+footer {
+  display: grid;
+  grid-template-areas: 
+  "wpplogo iglogo fblogo";
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: auto auto auto;
+}
+.wpplogo{grid-area: wpplogo; font-size: 12px; font-family: 'Kanit', sans-serif; color: goldenrod; margin-left: 100px;}
+.iglogo{grid-area: iglogo; font-size: 12px; font-family: 'Kanit', sans-serif; color: goldenrod; margin-left: 100px;}
+.fblogo{grid-area: fblogo; font-size: 12px; font-family: 'Kanit', sans-serif; color: goldenrod; margin-left: 100px;}
+
+.gridsCatalogo {
+  display: grid;
+  grid-template-areas: 
+  "platosJpg dosTablasJpg manijaJpg";
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: auto auto auto;
+}
+.platosJpg{grid-area: platosJpg; display: flex; flex-direction: column; font-family: 'Kanit', sans-serif; color: goldenrod; margin-left: 12px; text-align: center;}
+.dosTablasJpg{grid-area: dosTablasJpg; display: flex; flex-direction: column; font-family: 'Kanit', sans-serif; color: goldenrod; margin-left: 12px; text-align: center;}
+.manijaJpg{grid-area: manijaJpg; display: flex; flex-direction: column; font-family: 'Kanit', sans-serif; color: goldenrod; margin-left: 12px; text-align: center;}
+
+.gridsNosotros {
+  display: grid;
+  grid-template-areas: 
+  "videoTerra deDondeN logrosN";
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: auto auto auto;
+
+}
+.videoTerra {grid-area: videoTerra; padding-top: 40px;}
+.deDondeN {grid-area: deDondeN; margin-right: 100px; margin-top: 150px; text-align: center;}
+.logrosN {grid-area: logrosN; margin-right: 100px; margin-top: 350px; text-align: center;}
+
+
+
+
+@media only screen and (max-width: 760px){
+  header { display: grid;
+    grid-template-areas: 
+    "headerBaner"
+    "headerNav"
+    ".. logoUno"
+    ".. abajoDelLogo";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    background-color: brown;
+
+  }
+
+  .headerBaner {grid-area: headerBaner; }
+  .headerNav {grid-area: headerNav; display: flex; flex-direction: column;}
+  .logoUno {grid-area: logoUno;}
+  .abajoDelLogo {grid-area: abajoDelLogo;}
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  ul > li {
+    margin: 0 auto; 
+  }
+
+  .gridsMain{
+    display: grid;
+    grid-template-areas: 
+    "indexParrafo .."
+    "fony fony";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+  }
+  
+  .indexParrafo {grid-area: indexParrafo; color:aliceblue; font-family: 'Kanit', sans-serif; display: flex; justify-content: center; flex-direction: column;}
+  .fony {grid-area: fony; display: flex; justify-content: center; flex-direction: column;  padding: 10px; margin-top: 33px;}
+
+  .gridMejoramosMain {
+    display: grid;
+    grid-template-areas: 
+    "tituloYParrafo"
+    ;
+    grid-template-columns: 50% 50%; 
+    grid-template-rows: auto auto;
+  }
+  .tituloYParrafo {grid-area: tituloYParrafo; display: flex; }
+
+  .gridsNosotros {
+    display: grid;
+    grid-template-areas: 
+    "videoTerra"
+    "logrosN"
+    "deDondeN"
+    ;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+  }
+  .videoTerra{grid-area: videoTerra;}
+  .deDondeN{grid-area: deDondeN; display: flex; flex-direction: column; }
+  .logrosN{grid-area: logrosN; display: flex; flex-direction: column; }
+
+  .gridsCatalogo {
+    display: grid;
+    grid-template-areas: 
+    "platosJpg" 
+    "dosTablasJpg" 
+    "manijaJpg";
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+  }
+  .platosJpg {grid-area: platosJpg; align-items: center;}
+  .dosTablasJpg {grid-area: dosTablasJpg; align-items: center;}
+  .manijaJpg {grid-area: manijaJpg; align-items: center;}
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+}
